@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>@Troymex Communication Made Easy (TCME)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div id="loginScreen" class="screen">
+      <h1>Welcome to TCME</h1>
+      <form id="loginForm">
+        <input type="text" id="loginUsername" placeholder="Username" required>
+        <input type="password" id="loginPassword" placeholder="Password" required>
+        <button type="submit">Login</button>
+        <p>Don't have an account? <a href="#" id="registerLink">Register here</a></p>
+      </form>
+    </div>
+
+    <div id="registerScreen" class="screen hidden">
+      <h1>Register for TCME</h1>
+      <form id="registerForm">
+        <input type="text" id="registerName" placeholder="Full Name" required>
+        <input type="text" id="registerPhone" placeholder="Phone Number" required>
+        <input type="text" id="registerUsername" placeholder="Username" required>
+        <input type="password" id="registerPassword" placeholder="Password" required>
+        <button type="submit">Register</button>
+        <p>Already have an account? <a href="#" id="loginLink">Login here</a></p>
+      </form>
+    </div>
+
+    <div id="mainScreen" class="screen hidden">
+      <header>
+        <h1>TCME</h1>
+        <nav>
+          <button id="homeButton">Home</button>
+          <button id="friendsButton">Friends</button>
+          <button id="messagesButton">Messages</button>
+          <button id="logoutButton">Logout</button>
+        </nav>
+      </header>
+
+      <section id="home" class="main-section">
+        <h2>Welcome, <span id="currentUserName"></span></h2>
+        <textarea id="postInput" placeholder="What's on your mind?"></textarea>
+        <button id="postButton">Post</button>
+        <div id="postsContainer"></div>
+      </section>
+
+      <section id="friends" class="main-section hidden">
+        <h2>Friends</h2>
+        <input type="text" id="friendSearch" placeholder="Search by name or phone number">
+        <button id="searchFriendButton">Search</button>
+        <div id="friendsList"></div>
+      </section>
+
+      <section id="messages" class="main-section hidden">
+        <h2>Messages</h2>
+        <textarea id="messageInput" placeholder="Type a message"></textarea>
+        <button id="sendMessageButton">Send</button>
+        <div id="messagesContainer"></div>
+      </section>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
